@@ -8,7 +8,9 @@
     <script>
         // 1 es piedra, 2 es papel, 3 es tijera
         let player = 0
-        let computer = 0
+        let computer = 2
+        
+        // Player choice
         player = prompt("Elije: 1 para piedra, 2 para papel, 3 para piedra")
         
         if(player == 1) {
@@ -19,6 +21,29 @@
             alert("Elegiste tijera")
         } else {
             alert("Opción incorrecta")
+        }
+
+        // Computer choice
+        if(computer == 1) {
+            alert("PC elige piedra")
+        } else if(computer == 2) {
+            alert("PC elige papel")
+        } else if(computer == 3) {
+            alert("Elegiste tijera")
+        }
+
+        // Run game
+
+        if(player == computer) {
+            alert("Es un empate")
+        } else if(player == 1 && computer == 3) {
+            alert("Ganaste!")
+        } else if(player == 2 && computer == 1) {
+            alert("Ganaste!")
+        } else if(player == 3 && computer == 2) {
+            alert("Ganaste!")
+        } else {
+            alert("Perdiste")
         }
     </script>
 </head>
