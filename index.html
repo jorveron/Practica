@@ -5,57 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Piedra, Papel o Tijera</title>
-    <script>
-        function aleatorio(min, max) {
-            return Math.floor(Math.random() * (max - min + 1) + 1)
-        }
-        
-        function eleccion(jugada) {
-            resultado = ""
-            if(jugada == 1) {
-                resultado = "Piedra"
-            } else if(jugada == 2) {
-                resultado = "Papel"
-            } else if(jugada == 3) {
-                resultado = "Tijera"
-            } else {
-                resultado = "Opción incorrecta"
-            }
-        }
-        
-        // 1 es piedra, 2 es papel, 3 es tijera
-        let player = 0
-        let computer = 0
-        let triunfos = 0
-        let perdidas = 0
-        
-        while (triunfos < 3 && perdidas < 3) {
-            pc = aleatorio(1,3)
-            player = prompt("Elije: 1 para piedra, 2 para papel, 3 para piedra")
-
-            alert("PC elige: " + eleccion(computer))
-            alert("Tu eliges: " + eleccion(player))
-
-            // Run game
-
-            if(player == computer) {
-                alert("Es un empate")
-            } else if(player == 1 && computer == 3) {
-                alert("Ganaste!")
-            } else if(player == 2 && computer == 1) {
-                alert("Ganaste!")
-            } else if(player == 3 && computer == 2) {
-                alert("Ganaste!")
-            } else {
-                alert("Perdiste")
-            }
-
-        }
-
-        alert("Ganaste " + triunfos + "veces. " + "Perdiste" + perdidas + "veces")
-
-        
-    </script>
+    <script src="js/codigo.js"></script>
 </head>
 <body>
     
