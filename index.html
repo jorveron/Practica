@@ -6,31 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Piedra, Papel o Tijera</title>
     <script>
+        function aleatorio(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) + 1)
+        }
+        
+        function eleccion(jugada) {
+            resultado = ""
+            if(jugada == 1) {
+                resultado = "Piedra"
+            } else if(jugada == 2) {
+                resultado = "Papel"
+            } else if(jugada == 3) {
+                resultado = "Tijera"
+            } else {
+                resultado = "Opción incorrecta"
+            }
+        }
+        
         // 1 es piedra, 2 es papel, 3 es tijera
         let player = 0
-        let computer = 2
-        
-        // Player choice
+        let computer = aleatorio(1,3)
         player = prompt("Elije: 1 para piedra, 2 para papel, 3 para piedra")
-        
-        if(player == 1) {
-            alert("Elegiste piedra")
-        } else if(player == 2) {
-            alert("Elegiste papel")
-        } else if(player == 3) {
-            alert("Elegiste tijera")
-        } else {
-            alert("Opción incorrecta")
-        }
 
-        // Computer choice
-        if(computer == 1) {
-            alert("PC elige piedra")
-        } else if(computer == 2) {
-            alert("PC elige papel")
-        } else if(computer == 3) {
-            alert("Elegiste tijera")
-        }
+        alert("PC elige: " + eleccion(computer))
+        alert("Tu eliges: " + eleccion(player))
 
         // Run game
 
