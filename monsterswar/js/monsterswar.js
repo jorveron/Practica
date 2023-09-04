@@ -4,8 +4,6 @@ let vidasJugador = 3
 let vidasEnemigo = 3
 
 
-
-
 function iniciarJuego() {
     let botonMascotaJugador = document.getElementById('boton-mascota')
     botonMascotaJugador.addEventListener('click', seleccionarMascotaJugador)
@@ -16,6 +14,9 @@ function iniciarJuego() {
     botonAgua.addEventListener('click', ataqueAgua)
     let botonTierra = document.getElementById('boton-tierra')
     botonTierra.addEventListener('click', ataqueTierra)
+
+    let botonReiniciar = document.getElementById('boton-reiniciar')
+    botonReiniciar.addEventListener('click', reiniciarJuego)
 }
 
 function seleccionarMascotaJugador() {
@@ -33,8 +34,9 @@ function seleccionarMascotaJugador() {
     } else {
         alert("Debes seleccionar una mascota para continuar.")
     }
+    let botonMascotaJugador = document.getElementById('boton-mascota')
+    botonMascotaJugador.disabled = true
     seleccionarMascotaEnemigo()
-    
 }
 
 function seleccionarMascotaEnemigo() {
@@ -110,7 +112,7 @@ function resultadoCombate() {
     } else if (vidasJugador == 0) {
         crearMensajeFinal('Lo siento. Perdiste!')
     }
-    
+
 }
 
 function crearMensaje(resultado) {
@@ -129,6 +131,17 @@ function crearMensajeFinal(resultadoFinal) {
     parrafo.innerHTML = resultadoFinal
 
     sectionMensaje.appendChild(parrafo)
+
+    let botonFuego = document.getElementById('boton-fuego')
+    botonFuego.disabled = true
+    let botonAgua = document.getElementById('boton-agua')
+    botonAgua.disabled = true
+    let botonTierra = document.getElementById('boton-tierra')
+    botonTierra.disabled = true
+}
+
+function reiniciarJuego() {
+    location.reload()
 }
 
 function aleatorio(min, max) {
