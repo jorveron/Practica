@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Bigelow+Rules&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Bigelow Rules', cursive;
+    font-size: 24px;
+    background-color: #404258;
+    color: #f8f3f3;
+}
+#seleccionar-mascota {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.titulo-principal {
+    font-size: 80px;
+    color: rgb(231, 141, 22);
+    margin: 20px 10px 10px 10px; 
+}
+.subtitulo {
+    color: #f8f3f3;
+    font-size: 36px;
+    margin: 10px;
+}
+.tarjetas {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: flex-start;   
+}
+.tarjeta-mascota {
+    width: 200px;
+    height: 300px;
+    padding: 10px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #474E68;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 2px solid #f8f3f3;
+    text-align: center;
+    color: #f8f3f3;
+    font-size: 32px;
+}
+.tarjeta-mascota img {
+    width: 180px;
+    margin: 20px;
+}
+input {
+    display: none; 
+}
+input:hover + label, .boton:hover {
+    border-color: #837faa;
+}
+input:checked + label {
+    background-color: #6B728E;
+    border-color: #12aa0c;
+}
+#boton-reiniciar:hover {
+    color: rgb(231, 141, 22);
+}
+.boton {
+    width: 140px;
+    height: 60px;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #474E68;
+    border: 2px solid #f8f3f3;
+    box-sizing: border-box;
+    border-radius: 20px;
+    font-family: 'Bigelow Rules', cursive;
+    font-size: 32px;
+    text-align: center;
+    color: #f8f3f3;
+}
+
+#seleccionar-ataque {
+    flex-direction: column;
+    align-items: center;
+}
+.boton-ataques {
+    display: flex;
+    gap: 10px
+}
+#mensajes {
+    width: 400px;
+    height: 120px;
+    background-color: #6B728E;
+    margin: 10px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+#boton-reiniciar {
+    width: 150px;
+    color: #f8f3f3;
+    background-color: transparent;
+    border: none;
+    font-family: 'Bigelow Rules', cursive, bold;
+    font-size: 32px;
+}
+
+.ataques {
+    display: grid;
+    grid-template-columns: 100px 100px;
+}
+.ataques-jugador, .ataques-enemigo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 360px) {
+    .tarjetas, .boton-ataques  {
+        flex-direction: column;
+    }
+    #mensajes {
+        width: 300px;
+    }
+}
